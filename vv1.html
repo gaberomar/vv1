@@ -1,17 +1,31 @@
 
 
-
-
-<script>
+<script type="c49d70896d83f8e47c6d99db-text/javascript">
 function getParam ( sname )
 {
   var params = location.search.substr(location.search.indexOf("?")+1);
-  var sval =  params.replace("sv=", "");
+  var sval =  params.replace("sv=", "&");
   
   return sval;
 }
-var sv = getParam("sv");
 
+function removeloto() {
+    var elem = document.getElementById('videojs');
+    elem.parentNode.removeChild(elem);
+    return false;
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var sv = getParameterByName("sv");
 </script>
 <meta name="referrer" content="no-referrer">
 <style>html,body{margin:0;padding:0;background:#000;;}</style>
