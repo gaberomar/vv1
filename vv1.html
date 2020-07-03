@@ -1,0 +1,99 @@
+﻿
+
+
+<script>
+function getParam ( sname )
+{
+  var params = location.search.substr(location.search.indexOf("?")+1);
+  var sval =  params.replace("sv=", "");
+  
+  return sval;
+}
+var sv = getParam("sv");
+
+</script>
+<meta name="referrer" content="no-referrer">
+<style>html,body{margin:0;padding:0;background:#000;;}</style>
+<link href="https://www.hlstester.com/embed/new-player.css" rel=stylesheet type="text/css">
+<script src="http://player.mangomolo.com/public/js/jquery-2.0.0.js"></script>
+<script src="http://player.mangomolo.com/public/js/crypto-js/rollups/aes.js"></script>
+<script src="http://player.mangomolo.com/public/js/crypto-js/rollups/pbkdf2.js"></script>
+<script src="http://player.mangomolo.com/public/js/crypto-js/rollups/sha256.js"></script>
+<script src="http://player.mangomolo.com/resources/assets/js/MangoPlayerLive_v2.js?v=1.0.0"></script>
+<script async src='/cdn-cgi/bm/cv/2172558837/api.js'></script>
+
+<body onload="init()">
+<script>
+
+
+	 
+				 
+				 document.write('<video id="streaming" autoplay preload="auto" height="100%" width="100%" class="video-js" controls data-setup="{&quot;language&quot;: &quot;vi&quot;}"></video>');
+
+		function play(cid) {
+
+
+				src = cid;
+			player = videojs("streaming");
+			player.ready(function() {
+				player.src({
+					src: src,
+					type: "application/x-mpegURL",
+				});
+			});
+
+			player.play();
+
+		}
+		function reload(i) {
+			if (player.paused() && player.error_ != null )
+			{
+				play(sv);
+			}
+			 
+			 
+				
+		}
+		function init() {
+			var i = 1;
+			play(sv);
+			setInterval(function() {reload(i); i++ }, 1000);
+		}
+		
+			 
+	</script>
+<div id="videojs">
+</div>
+<style>
+	.video-js {
+		width: 100%;
+		height: 95%;
+	}
+	body {
+		text-align: center;
+		margin: 0px;
+	}
+	#videojs {
+		width: 100%;
+		height: 95%;
+	}.streaming-dimensions{
+				width: 100% !important;
+		height: 95% !important;
+	}
+</style>
+<span style="background: transparent; box-sizing: border-box; color: white; font-size: 10px; font-weight: bold; height: 38px; padding: 0px 5px; position: absolute; right: 60px; top: 400px; width: 70px;"></span><img pagespeed_url_hash="b8e6b5a44e2403b" src="https://4.bp.blogspot.com/-34SPx0qzBko/XV2tEcLbiVI/AAAAAAAAID8/H9j9Vrfo1jEVSq8xyWQgPvowGHt94SYvwCK4BGAYYCw/s1600/logo1.png" style="border: none; box-sizing: border-box; height: 30px; padding: 0px; position: absolute; right: 15px; top: 20px; vertical-align: middle; width: 90px;" />
+<script data-cf-settings="917f4bead301c33a880e4398-|49" defer="" src="http://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"></script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'5acfaa63f937084b',m:'b6e9b7f45c9706b6b43981e2f4e50eea6d41db0f-1593769442-1800-AaPrmGdmDo7vXBHR7MY2pYNAfR2pVrZp/FvZDIblu71MOrBTRB2W0ZKBRtQCXOIc6eT8/eClUKuBJ74bSohiuw78vzylrJ0an8JlvZPCxFoxQv8pK1IO9RnE7+zMZRbQjseuedVxrltPQR7FJzWrK8g=',s:[0xbb7935f4b7,0x8a8b17f0ac],}})();</script></body>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
