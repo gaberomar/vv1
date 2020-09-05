@@ -26,14 +26,12 @@ var sv = getParam("sv");
 <link href="http://www.tvmienphi.tv/assets/player/plugins/tube-skin/videojs-tube.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/videojs-flash/dist/videojs-flash.js"></script>
 <body onload="init()">
-
-
-<video id="play" class="video-js vjs-big-play-centered skin-blue" autoplay="" playsinline="true" webkit-playsinline="true" x5-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" tabindex="2" mediatype="video" __idm_id__="897552385" controls preload="auto" data-setup="{}">
+<video id="play" class="video-js vjs-big-play-centered skin-blue" autoplay="" playsinline="true" webkit-playsinline="true" x5-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" tabindex="2" mediatype="video" __idm_id__="897552385" controls preload="auto" data-setup="{}"></video>
 
   	<script>
     function play(link){if(link.indexOf('.html')!=-1){var xmlhttp=new XMLHttpRequest();xmlhttp.open("GET",link,!1);xmlhttp.send();src=xmlhttp.responseText}else src=link;player=videojs("play");player.ready(function(){player.src({src:src,type:"application/x-mpegURL"})});player.play()}
 		    function reload() {if (player.paused() && player.error_ != null)play(sv);}
-		    function init() { play(sv); setInterval(function() {reload()}, 3000);} </script></video>
+		    function init() { play(sv); setInterval(function() {reload()}, 3000);} </script>
 
 
 <style>
@@ -78,7 +76,4 @@ pagespeed.addInstrumentationInit('/ngx_pagespeed_beacon', 'load', '', 'http://ra
 </body>
 </html>     
 <span style="background: transparent; box-sizing: border-box; color: white; font-size: 10px; font-weight: bold; height: 38px; padding: 0px 5px; position: absolute; right: 60px; top: 400px; width: 70px;"></span><img pagespeed_url_hash="b8e6b5a44e2403b" src="https://4.bp.blogspot.com/-34SPx0qzBko/XV2tEcLbiVI/AAAAAAAAID8/H9j9Vrfo1jEVSq8xyWQgPvowGHt94SYvwCK4BGAYYCw/s1600/logo1.png" style="border: none; box-sizing: border-box; height: 30px; padding: 0px; position: absolute; right: 15px; top: 20px; vertical-align: middle; width: 90px;" />
-
-
-
 
