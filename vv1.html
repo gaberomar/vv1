@@ -26,14 +26,17 @@ var sv = getParam("sv");
 <link href="http://www.tvmienphi.tv/assets/player/plugins/tube-skin/videojs-tube.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/videojs-flash/dist/videojs-flash.js"></script>
 <body onload="init()">
-<video id="play" class="video-js vjs-big-play-centered skin-blue" autoplay="" playsinline="true" webkit-playsinline="true" x5-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" tabindex="2" mediatype="video" __idm_id__="897552385" controls preload="auto" data-setup="{}"></video>
+<video id="play" class="video-js vjs-big-play-centered skin-blue" autoplay="" playsinline="true" webkit-playsinline="true" x5-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" tabindex="2" mediatype="video" __idm_id__="897552385" controls preload="auto" data-setup="{}"><!-- worning text if needed -->
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
 
   	<script>
     function play(link){if(link.indexOf('.html')!=-1){var xmlhttp=new XMLHttpRequest();xmlhttp.open("GET",link,!1);xmlhttp.send();src=xmlhttp.responseText}else src=link;player=videojs("play");player.ready(function(){player.src({src:src,type:"application/x-mpegURL"})});player.play()}
 		    function reload() {if (player.paused() && player.error_ != null)play(sv);}
 		    function init() { play(sv); setInterval(function() {reload()}, 3000);} </script>
 
-
+<div id="videojs">
+</div>
 <style>
 	.video-js {
 		width: 100%;
