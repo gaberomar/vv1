@@ -1,4 +1,5 @@
 
+
 <html>
 <head>
     <script type="text/javascript" src="https://cdn.pr.trt.com.tr/static/js/player/player.1.0.165.js"></script>
@@ -29,6 +30,10 @@ var sv = getParam("sv");
                             var currUrl = window.location.href;
                             (function(){
                                 var player = window.hola_player({
+                                     sources: [{
+                                        src: sv,
+                                        type: 'application/x-mpegurl'
+                                    }],
                                     player: "#player",
                                     auto_play: true,
                                     muted: true,
@@ -38,13 +43,10 @@ var sv = getParam("sv");
                                     share: false,
                                     width: "100%",
                                     aspectRatio: "16:9",
-                                    poster: "resimler/214000/214277.jpg",
-                                    sources: [{
-                                        src: sv,
-                                        type: 'application/x-mpegurl'
-                                    }],
+                                    poster: "http://1.bp.blogspot.com/-6Utq5JU_l2w/YCAo8gB0x7I/AAAAAAAALZU/YJxOQHkvIywpU4znsCgYEvIsc-U8ijY1wCK4BGAYYCw/s1600/2.png",
                                     settings: true,
-                                                                            });
+
+                                      });   
 
                                 player.vjs.on('error', function() {
                                     $.ajax({
