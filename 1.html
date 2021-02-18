@@ -1,9 +1,9 @@
 
 
 
-<html>
-<head>
-    <script type="text/javascript" src="https://cdn.pr.trt.com.tr/static/js/player/player.1.0.165.js"></script>
+
+<meta name="referrer" content="no-referrer">
+<script type="text/javascript" src="https://cdn.pr.trt.com.tr/static/js/player/player.1.0.165.js"></script>
 <script> 
 function getParam ( sname )
 {
@@ -13,42 +13,28 @@ function getParam ( sname )
 }
 var sv = getParam("sv");
 </script>
-	 </head>
-	 <style>
-                            .vjs-text-track-display div {color:#ffff00;font-size: 1.8em;}
-                            .vjs5-hola-skin .vjs-menu.vjs-rightclick-popup{display: none !important;}
-                            .vjs-menu > .vjs-menu-content:first-child > .vjs-menu-submenu:first-child > li:first-child{display: none !important;}
-                            .vjs-my-fancy-modal{text-align: center; z-index: 99999; background: black !important;}
-                            .vjs-my-fancy-modal .vjs-modal-dialog-content{font-size: 25px; font-weight: bold; padding-top: 250px;}
-                        </style>
-<body style="margin:0;background:#000;">
-<div id="iframeDiv" style="width: 100%;"> 
 <body onload="init()">
+
 <div id="player" style="background-color: #000;"></div>
 
- <script>
-                            var currTime = new Date().getTime();
-                            var currUrl = window.location.href;
-                            (function(){
-                                var player = window.hola_player({
-                                     sources: [{
-                                        src: sv,
-                                        type: 'application/x-mpegurl'
-                                    }],
-                                    player: "#player",
-                                    auto_play: true,
-                                    muted: false,
-                                    playsInline: true,
-                                    html5: true,
-                                    controls: true,
-                                    share: false,
-                                    width: "100%",
-                                    aspectRatio: "16:9",
-                                    settings: true,
-
-                                      });   
-
-                                player.vjs.on('error', function() {
+<script>
+    (function(){
+        window.hola_player({
+            player: "#player",
+            auto_play: true,
+            dvr: false,
+            muted: false,
+            controls: true,
+            share: false,
+            settings: true,
+           width: "100%",
+            height: "100%",
+           sources: [{
+                src: sv,
+                type: 'application/x-mpegurl'
+            }],
+        });
+    player.vjs.on('error', function() {
                                     $.ajax({
                                         url: "https://geoip-db.com/jsonp",
                                         jsonpCallback: "callback",
@@ -62,10 +48,16 @@ var sv = getParam("sv");
                                     });
                                     //var error = player.vjs.error();
                                 });
-                            })();
-                        </script>
-  <div class="video-source">         
+
+                
+                  })();
+
+
+       </script>
 </body>
-</html><span style='position:absolute; bottom: 35px!important; left: 10px!important; max-bottom: 10px!important; max-width: 170%!important; width: 22%!important; font-size: 13px; font-weight: bold;color: #ff0;'>
+<span style='position:absolute; bottom: 35px!important; left: 10px!important; max-bottom: 10px!important; max-width: 170%!important; width: 22%!important; font-size: 13px; font-weight: bold;color: #ff0;'>
 <img style= 'left: 10px!important; max-height: 50px!important; max-width: 100%!important; width: 90%!important;' src='http://1.bp.blogspot.com/-6Utq5JU_l2w/YCAo8gB0x7I/AAAAAAAALZU/YJxOQHkvIywpU4znsCgYEvIsc-U8ijY1wCK4BGAYYCw/s1600/2.png'></span>
+
+
+
 
