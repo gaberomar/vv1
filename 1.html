@@ -18,6 +18,7 @@ var sv = getParam("sv");
 <div id="player" style="background-color: #000;"></div>
 
 <script>
+ var i = 0;
     (function(){
         window.hola_player({
             player: "#player",
@@ -35,24 +36,24 @@ var sv = getParam("sv");
             }],
         });
     player.vjs.on('error', function() {
-                                    $.ajax({
-                                        url: "https://geoip-db.com/jsonp",
-                                        jsonpCallback: "callback",
-                                        dataType: "jsonp",
-                                        success: function( location ) {
-                                            if(location.country_code != 'TR'){
-                                                var modal = player.vjs.createModal('Uluslararası müsabakalardaki telif kısıtlamaları nedeniyle Türkiye sınırları dışında izlenememektedir.');
-                                                modal.addClass('vjs-my-fancy-modal');
+                               $.ajax({
+         url: "https://geoip-db.com/jsonp",
+         jsonpCallback: "callback",
+           dataType: "jsonp",
+         success: function( location ) {
+         if(location.country_code != 'TR'){
+         var modal = player.vjs.createModal('Uluslararası müsabakalardaki telif kısıtlamaları nedeniyle Türkiye sınırları dışında izlenememektedir.');
+          modal.addClass('vjs-my-fancy-modal');
                                             }
                                         }
                                     });
                                     //var error = player.vjs.error();
                                 });
-function init() {
+                  function init() {
 			var i = 1;
 			play('sv');
 			setInterval(function() {reload(i); i++ }, 1000);
-		}
+		        }
 		
                 
                   })();
