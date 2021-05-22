@@ -21,6 +21,10 @@ var sv = getParam("sv");
    <script>
                        
                             var player = window.hola_player({
+                                sources: [{
+                                    src: sv,
+                                    type: 'application/x-mpegurl'
+                                }],
                                 player: "#player",
                                 auto_play: true,
                                 muted: true,
@@ -31,10 +35,6 @@ var sv = getParam("sv");
                                 width: "100%",
                                 aspectRatio: "16:9",
                                 poster: "https://cdns.livestreamapi.ru/img/soc/1.jpg",
-                                sources: [{
-                                    src: sv,
-                                    type: 'application/x-mpegurl'
-                                }],
                                        settings: true,
                                                     ads: {
                                             adTagUrl: '',
