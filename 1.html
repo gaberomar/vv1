@@ -10,11 +10,11 @@ function getParam ( sname )
 var sv = getParam("sv");
 
 </script>
-<meta name="referrer" content="no-referrer">
+
 <style> video {object-fit:fill}</style><style>html,body{margin:0;}</style>
 <style> .video-js {width: 100%; height: 100%;} #videojs {width: 100%; height: 100%;}</style>
-    <div class="video-source">
-                  
+ 
+               <meta name="referrer" content="no-referrer">   
   <script type="text/javascript" src="https://cdn.pr.trt.com.tr/static/js/player/player.1.0.165.js"></script>
 <body onLoad="init()">
 <div id="player" style="width:100%;height:100%" ></div>
@@ -46,7 +46,7 @@ var sv = getParam("sv");
 
                                                             player.vjs.on('error', function() {
                                     $.ajax({
-                                        url: "https://geoip-db.com/jsonp",
+                                        url: "",
                                         jsonpCallback: "callback",
                                         dataType: "jsonp",
                                         success: function( location ) {
